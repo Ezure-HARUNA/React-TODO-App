@@ -5,15 +5,18 @@ import Item from "./item"
 const List= (props) => {
     const items = props.todos.map((todo) =>{
         return (
-            <Item todo={todo}></Item>  //Appの宿題"List"を表示
+            <Item todo={todo} todos={props.todos} setTodos={props.setTodos}></Item>  
+        
         )
 
-        return (
-            <ul>
-                {items}
-            </ul>
-        )
+        
     })
+
+    return (
+        <ul>
+            {items}
+        </ul>
+    )
 }
 
 export default List
