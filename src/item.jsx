@@ -29,10 +29,11 @@ const Item = (props) => {　//props
     //削除ボタンについての処理
     const handeleDelete = () => {
         // todosをコピーする　　//form.jsxの部分と同じ感じで書く
+        const deleteTodos=props.todos.slice()
         // todosの該当する部分を削除する
-
+        deleteTodos.splice(props.id, 1)
         // setTodosでtodosを更新
-
+        props.setTodos(deleteTodos)
 
     }
 

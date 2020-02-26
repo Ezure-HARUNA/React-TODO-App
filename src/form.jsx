@@ -2,6 +2,21 @@
 
 import React from "react"
 
+import styled from "styled-components"
+
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import AddIcon from '@material-ui/icons/Add';
+
+
+const Button =styled.button`
+ color: white;
+ /* &:hover: { */
+    /* transform: translateY(4px); */
+    /* }   */
+`
+
+
 //コンポーネントの作成 
 
 const Form = (props) => {
@@ -24,7 +39,7 @@ const Form = (props) => {
         //取り出した値の追加
         newTodos.push(title)
 
-        // ➃stateの再定義(setTodosを使う)
+        // ➃setTodosでnewTodosを更新
         props.setTodos(newTodos)
     }
     return (
@@ -33,11 +48,13 @@ const Form = (props) => {
             //引数のeを渡すため、関数定義の中で関数を実行。
             handleSubmit(e)
         }}> 
-            <input type="text" name="title" />
-            <button>追加</button>
+            {/* <input type="text" name="title" /> */}
+            <TextField id="standard-basic" label="入力してね" type="text" name="title"  />
+            <Button variant="contained"><AddIcon style={{ fontSize: 20 }} color="primary">add</AddIcon>追加</Button>
         </form>
     )
 }
 
 //Appコンポーネントのエクスポート
 export default Form
+
