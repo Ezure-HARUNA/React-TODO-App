@@ -9,12 +9,12 @@ import TextField from '@material-ui/core/TextField';
 import AddIcon from '@material-ui/icons/Add';
 
 
-// const Button =styled.button`
-//  color: white;
+const StyledButton = styled(Button)`
+    padding-top: 10px;
  /* &:hover: { */
     /* transform: translateY(4px); */
     /* }   */
-// `
+ `
 
 
 //コンポーネントの作成 
@@ -50,7 +50,7 @@ const Form = (props) => {
         }}> 
             {/* <input type="text" name="title" /> */}
             <TextField id="standard-basic" label="入力してね" type="text" name="title"  />
-            <Button variant="contained"><AddIcon style={{ fontSize: 20 }} color="primary">add</AddIcon>追加</Button>
+            <StyledButton variant="contained"><AddIcon style={{ fontSize: 20 }} color="primary">add</AddIcon>追加</StyledButton>
         </form>
     )
 }
