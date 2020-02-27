@@ -21,7 +21,7 @@ const Item = (props) => {　//props
     //＝＝＝const isDoneState = isDone ? "戻す"　:　"完了"
 
     //一重線を引く
-    const pTag
+    let pTag
     if (isDone) {  //isDoneState === trueと同じ意味
         pTag = <P>{props.todo}</P>
     } else {
