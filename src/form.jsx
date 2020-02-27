@@ -9,12 +9,12 @@ import TextField from '@material-ui/core/TextField';
 import AddIcon from '@material-ui/icons/Add';
 
 
-const Button =styled.button`
- color: white;
+// const Button =styled.button`
+//  color: white;
  /* &:hover: { */
     /* transform: translateY(4px); */
     /* }   */
-`
+// `
 
 
 //コンポーネントの作成 
@@ -33,7 +33,7 @@ const Form = (props) => {
         // ➂取り出した値をtodosに追加。
         //Reactではstateを直接変更しない
         //stateをコピーする(スライス)
-        //Appで
+        //初期値であるtodosをコピー
         const newTodos= props.todos.slice()
 
         //取り出した値の追加

@@ -1,4 +1,10 @@
 import React from "react"
+import styled from "styled-components"
+// import { styled } from "@material-ui/core"
+
+const P = styled.p`
+text-decoration: line-through;
+`
 
 const Item = (props) => {　//props
     //完了・戻す用のstateを設定
@@ -13,6 +19,14 @@ const Item = (props) => {　//props
         isDoneState = "完了"
     }
     //＝＝＝const isDoneState = isDone ? "戻す"　:　"完了"
+
+    //一重線を引く
+    const pTag
+    if (isDone) {  //isDoneState === trueと同じ意味
+        pTag = <P>{props.todo}</P>
+    } else {
+        pTag = <p>{props.todo}</p> 
+    }
 
 
     const handleIsDone = () => {
@@ -42,7 +56,8 @@ const Item = (props) => {　//props
     
     return (
         <li>
-            <p>{props.todo}</p>
+            {pTag}
+            {/* <p>{props.todo}</p> */}
             <button onClick={handleIsDone}>{isDoneState}</button>
             <button onClick={handeleDelete}>削除</button>
         </li>
